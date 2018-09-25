@@ -15,7 +15,6 @@ import edu.uci.ics.crawler4j.robotstxt.RobotstxtServer;
  * @Date 2018/9/25-11:50
  **/
 public class ImageCrawlController {
-    private static final Logger logger = LoggerFactory.getLogger(ImageCrawlController.class);
 
     public static void main(String[] args) throws Exception {
 
