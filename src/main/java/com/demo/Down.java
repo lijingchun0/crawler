@@ -2,7 +2,6 @@ package com.demo;
 
 import java.io.*;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
@@ -17,9 +16,9 @@ public class Down {
      * @param urlStr
      * @param fileName
      * @param savePath
-     * @throws
+     * @throws IOException
      */
-    public static void downLoadFromUrl(String urlStr, String fileName, String savePath) throws IOException, MalformedURLException {
+    public static void downLoadFromUrl(String urlStr, String fileName, String savePath) throws IOException {
         URL url = new URL(urlStr);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         //设置超时间为3秒
@@ -47,7 +46,6 @@ public class Down {
             inputStream.close();
         }
 
-
         System.out.println("info:" + url + " download success");
 
     }
@@ -57,7 +55,7 @@ public class Down {
      * 从输入流中获取字节数组
      *
      * @param inputStream
-     * @return
+     * @return byte[]
      * @throws IOException
      */
     public static byte[] readInputStream(InputStream inputStream) throws IOException {
